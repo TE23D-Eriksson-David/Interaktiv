@@ -1,41 +1,45 @@
 ﻿using System;
 using System.IO;
+using Interaktiv;
 
-String filepath = @"C:\Users\david.eriksson5\Programering VS\Interaktiv\Interaktiv\ASCII.txt";
-string info = File.ReadAllText(filepath);
-Console.WriteLine(info);
+bool firstRun = false;
+Rum_Text a1 = new Rum_Text();
+
+while(true){
+if (firstRun != true){ 
+  Console.WriteLine("Left or right?");
+  firstRun = true;
+} else {
+a1.makeChoice();
+a1.printChoice();
 Console.ReadLine();
+Console.Clear();
+}
 
-/*
-                        (
-                          )     (
-                   ___...(-------)-....___
-               .-""       )    (          ""-.
-         .-'``'|-._             )         _.-|
-        /  .--.|   `""---...........---""`   |
-       /  /    |                             |
-       |  |    |                             |
-        \  \   |                             |
-         `\ `\ |                             |
-           `\ `|                             |
-           _/ /\                             /
-          (__/  \                           /
-       _..---""` \                         /`""---.._
-    .-'           \                       /          '-.
-   :               `-.__             __.-'              :
-   :                  ) ""---...---"" (                 :
-    '._               `"--...___...--"`              _.'
-      \""--..__                              __..--""/
-       '._     """----.....______.....----"""     _.'
-          `""--..,,_____            _____,,..--""`
-                        `"""----"""`
-*/
+}
+
+
+
+
+
+
+
+//a1.oct = 10;
+
+static void ostMetod()
+{
+  Console.WriteLine("Hej!");
+}
+
+//ostMetod();
+
 
 
 
 //bool test true || false;
 //Console.WriteLine(test);
 
+/*
 Console.WriteLine("Användarnamn");
 string name = Console.ReadLine();
 
@@ -57,6 +61,4 @@ else {
 }
 Console.ReadLine();
 
-
-
-
+*/
