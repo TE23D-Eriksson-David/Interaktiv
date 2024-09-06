@@ -2,20 +2,19 @@
 using System.IO;
 using Interaktiv;
 
-bool firstRun = false;
+bool firstRun = true;
 Rum_Text a1 = new Rum_Text();
 
 while(true){
-if (firstRun != true){ 
-  Console.WriteLine("Left or right?");
-  firstRun = true;
+if (firstRun == true){ 
+  Console.WriteLine("home or outside?");
 } else {
 a1.makeChoice();
 a1.printChoice();
-Console.ReadLine();
-Console.Clear();
+//Console.ReadLine();
+//Console.Clear();
 }
-
+firstRun = false;
 }
 
 
@@ -33,7 +32,8 @@ static void ostMetod()
 
 //ostMetod();
 
-
+if (Rum_Text.tableAnser.Contains("cgyjcguk"))
+{}
 
 
 //bool test true || false;
