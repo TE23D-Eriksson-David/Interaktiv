@@ -1,57 +1,74 @@
-using System;
+using SC = System.Console;
 using System.Reflection.Metadata;
 using System.Linq;
 
 namespace Interaktiv;
-
 class Rum_Text
 {
-
+int place = 0;
+public bool run = true;
  public string answer;
-public static string[] tableAnser = ["home","outside","sofa","bath","buss","car"];
+ public string choice1 = "home";
+ public string choice2 = "outside";
+public static string[] tableAnser = ["home","sofa","bath","outside","buss","car"];
  
 
-
-
 public void makeChoice(){
-answer = Console.ReadLine(); 
+answer = SC.ReadLine().ToLower(); 
 }
-
-
 public void printChoice(){
-
-switch ((string)answer.ToLower()) { 
+switch ((string)answer) { 
 
 case (string)"home":
-Console.WriteLine("1 midle");
-Console.WriteLine("sofa or bath");
-break;
+if (place > -1 & place < 1) {
+SC.WriteLine("1 midle");
+place = -1;
+choice1 = "sofa";
+choice2 = "bath";
+}
+break; 
 
 case (string)"outside":
-Console.WriteLine("2 midle");
-Console.WriteLine("buss or car");
+if (place > -1 & place < 1) {
+SC.WriteLine("2 midle");
+place = 1;
+choice1 = "buss stop";
+choice2 = "car";
+}
 break;
 
 case (string)"sofa":
-Console.WriteLine("1.1 end");
+if (place > -2 & place <= -1) {
+SC.WriteLine("1.1 end");
+place = -2;
+run = false;
+}
 break;
 
 case (string)"bath":
-Console.WriteLine("1.2 end");
+if (place > -2 & place <= -1) {
+SC.WriteLine("1.2 end");
+place = -2;
+run = false;
+}
 break;
 
 case (string)"buss stop":
-Console.WriteLine("2.1 end");
+if (place >= 1 & place < 2) {
+SC.WriteLine("2.1 end");
+place = 3;
+run = false;
+}
 break;
 
 case (string)"car":
-Console.WriteLine("2.2 end");
+if (place >= 1 & place < 2) {
+SC.WriteLine("2.2 end");
+place = 3;
+run = false;
+}
 break;
 
-
 } // switch
-
 } // test metod
-
 } // class
-

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Interaktiv")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+89a1c7e3e61b926ce5f089b5e5a6a27f0ded2762")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f2230368f4ddc546a0c96e903252e85811b46dae")]
 [assembly: System.Reflection.AssemblyProductAttribute("Interaktiv")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Interaktiv")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
